@@ -3,13 +3,13 @@
 
 def safe_print_list(my_list=[], x=0):
     i = 0
-    x = 0
+    m = 0
     try:
         for i in range(x):
             print("{}".format(my_list[i]), end='')
-            x++
-        except IndexError:
+            m = m + 1
+    except IndexError:
             print("")
-            return(x)
+            return(m)
     print("")
-    return(x)
+    return(m)
