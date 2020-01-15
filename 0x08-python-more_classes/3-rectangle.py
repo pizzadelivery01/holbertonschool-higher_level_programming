@@ -57,4 +57,4 @@ class Rectangle:
             for j in range(0, self.__width):
                 poundrec += '#'
             poundrec += '\n'
-    return poundrec
+        return poundrec
