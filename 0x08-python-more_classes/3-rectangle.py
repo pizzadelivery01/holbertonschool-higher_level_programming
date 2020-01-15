@@ -31,9 +31,31 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """setter:height"""
+        """setter: height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """ method: area"""
+        if self.__width and self.__height:
+            return (self.__width * self.__height)
+
+    def perimeter(self):
+        """method: perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        else
+        return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        """ print rectangle"""
+        poundrec = ""
+        if self.__width == 0 or self.__height == 0:
+            return poundrec
+            for i in range(self.__height):
+                poundrec += ('#' * self.__width)
+        poundrec = '\n'
+    return poundrec

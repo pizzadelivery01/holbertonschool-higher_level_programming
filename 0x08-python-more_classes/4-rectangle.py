@@ -49,3 +49,24 @@ class Rectangle:
             return 0
         else
         return (self.__width * 2) + (self.__height * 2)
+
+    def __str__(self):
+        """ print rectangle"""
+        poundrec = ""
+        if self.__width == 0 or self.__height == 0:
+            return poundrec
+        for i in range(self.__height):
+            poundrec += ('#' * self.__width)
+        poundrec = '\n'
+        return poundrec
+
+    def __repr__(self):
+        """ literal string representation of rectangle"""
+        repstr = ""
+        row = self.__width
+        column = self.__height
+        if self.__width == 0 or self.__height == 0:
+            return repstr
+        else:
+            repstr = "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+            return repstr
