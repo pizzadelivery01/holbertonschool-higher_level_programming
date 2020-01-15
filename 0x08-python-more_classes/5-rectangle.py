@@ -53,11 +53,10 @@ class Rectangle:
     def __str__(self):
         """ print rectangle"""
         poundrec = ""
-        if self.__width == 0 or self.__height == 0:
-            return poundrec
-        for i in range(self.__height):
-            poundrec += ('#' * self.__width)
-        poundrec = '\n'
+        for i in range(0, self.__height):
+            for j in range(0, self.__width):
+                poundrec += '#'
+            poundrec += '\n'
         return poundrec
 
     def __repr__(self):
@@ -70,3 +69,7 @@ class Rectangle:
         else:
             repstr = "Rectangle({:d}, {:d})".format(self.__width, self.__height)
             return repstr
+
+    def __del__(self):
+        """deletes an instance"""
+        print("Bye rectangle...")
