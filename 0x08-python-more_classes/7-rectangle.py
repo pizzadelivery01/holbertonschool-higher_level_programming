@@ -60,12 +60,9 @@ class Rectangle:
         poundrec = ""
         for i in range(0, self.__height):
             for j in range(0, self.__width):
-                try:
-                    poundrec += str(self.print_symbol)
-                except:
-                    poundrec += type(self).print_symbol
-                poundrec += '\n'
-        return poundrec.strip('\n')
+                poundrec += str(self.print_symbol)
+            poundrec += '\n'
+        return poundrec
 
     def __repr__(self):
         """ literal string representation of rectangle"""
