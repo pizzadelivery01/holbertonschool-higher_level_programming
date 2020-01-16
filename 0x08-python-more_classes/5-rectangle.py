@@ -67,8 +67,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return repstr
         else:
-            repstr = "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-            return repstr
+            repst = "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+            return repst
 
     def __del__(self):
         """deletes an instance"""
