@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-
-
 def pascal_triangle(n):
     """
     gets pascal triangle for n line,
     """
-
 
     matrix = []
     for i in range(0, n):
