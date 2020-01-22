@@ -11,7 +11,7 @@ def pascal_triangle(n):
     for i in range(0, n):
         matrixlen = len(matrix)
         if matrixlen <= 1:
-            matrix.append([1 for each in range(0, mat_len + 1)])
+            matrix.append([1 for each in range(0, matrixlen + 1)])
         else:
             row = []
             for j in range(0, len(matrix[i - 1]) + 1):
