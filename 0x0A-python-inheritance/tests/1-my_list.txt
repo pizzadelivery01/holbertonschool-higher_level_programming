@@ -1,4 +1,4 @@
-''1-my_list'' module
+The ''1-my_list'' module
 ======================
 
 using ''MyList'''
@@ -9,12 +9,12 @@ importing the function from module
 
 check for module docstring:
       >>> m = __import__("1-my_list").__doc__
-      >>> len(m) > 1
+      >>> print(len(m) > 1)
       True
 
 check for class docstring:
       >>> c = __import__("1-my_list").MyList.__doc__
-      >>> len(c) > 1
+      >>> print(len(c) > 1)
       True
 
 check for method docstring:
