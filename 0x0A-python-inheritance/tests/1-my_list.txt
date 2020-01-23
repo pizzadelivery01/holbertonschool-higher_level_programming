@@ -4,34 +4,29 @@ The ''1-my_list'' module
 using ''MyList'''
 ----------------------
 
-importing the function from module
+
 	  >>>MyList = __import__("1-my_list").MyList
 
-check for module docstring:
+
       >>> m = __import__("1-my_list").__doc__
       >>> print(len(m) > 1)
       True
 
-check for class docstring:
       >>> c = __import__("1-my_list").MyList.__doc__
       >>> print(len(c) > 1)
       True
 
-check for method docstring:
       >>> mod = __import__("1-my_list").MLlist.print_sorted.__doc__
       >>> len(mod) > 1
       True
 
-check that MyList inherits for list:
       >>> issubclass(MyList, list)
       True
 
-check for empty list:
       >>> lis = MyList()
       >>> lis.print_sorted()
       []
 
-check that appedning works:
       >>> lis.append(1)
       >>> lis.append(2)
       >>> lis.append(3)
@@ -39,24 +34,21 @@ check that appedning works:
       >>> print(lis)
       [1, 2, 3, 4]
 
-check for list in correct order:
       >>>lis.print_sorted()
       [1, 2, 3, 4]
 
-checking for reversed order:
-	 >>> l = MyList()
-    	 >>> l.append(4)
-      	 >>> l.append(3)
-         >>> l.append(2)
-       	 >>> l.append(1)
-	 >>> print(l)
-	 [4, 3, 2, 1]
-	 >>> l.print_sorted()
-	 [1, 2, 3, 4]
-	 >>> print(lis)
-	 [4, 3, 2, 1]
+       >>> l = MyList()
+       >>> l.append(4)
+       >>> l.append(3)
+       >>> l.append(2)
+       >>> l.append(1)
+       >>> print(l)
+       [4, 3, 2, 1]
+       >>> l.print_sorted()
+       [1, 2, 3, 4]
+       >>> print(lis)
+       [4, 3, 2, 1]
 
-check for negative number:
       >>> lis = MyList()
       >>> lis.append(-5)
       >>> lis.append(5)
@@ -67,7 +59,6 @@ check for negative number:
       >>> pint(lis)
       [4, 3, 2, 1, -5, 5]
 
-check for all neg numbers:
       >>> lis = Mylist()
       >>> lis.append(-2)
       >>> lis.append(-4)
@@ -81,7 +72,6 @@ check for all neg numbers:
       >>> print(lis)
       [-2, -8, -6, -10, -8]
 
-check for too many arguments:
       >>> lis.print_sorted(lis)
       Traceback (most recent call last):
       ...
