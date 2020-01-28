@@ -47,12 +47,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ creates instance with attributes set """
-        from models.rectangle import Rectangle
-        from models.square import Square
-        if cls.__name__ == "Rectangle":
-            temp = Rectangle(1, 1)
-        if cls.__name__ == "Square":
-            temp = Square(1)
+        if cls.__name__ is 'Rectangle':
+            temp = cls(1, 1)
+        if cls.__name__ == 'Square':
+            temp = cls(1)
         else:
             temp = None
         temp.update(**dictionary)
