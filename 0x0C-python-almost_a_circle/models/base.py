@@ -39,7 +39,7 @@ class Base:
         filename = cls.__name__ + ".json"
         listo = []
         if list_objs is not None:
-            for each in list_objs:
+            for i in list_objs:
                 listo.append(cls.to_dictionary(i))
         with open(filename, 'w') as f:
             f.write(cls.to_json_string(listo))
@@ -49,7 +49,7 @@ class Base:
         """ creates instance with attributes set """
         if cls.__name__ is "Rectangle":
             temp = cls(1, 1)
-        elif cls.__name__ is "Square":
+        if cls.__name__ is "Square":
             temp = cls(1)
         temp.update(**dictionary)
         return temp
