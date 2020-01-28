@@ -24,7 +24,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
-        self.y = y
+        self.__y = y
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x < 0:
@@ -90,7 +90,7 @@ class Rectangle(Base):
 
         def area(self):
             """returns area of rec"""
-            return self.__width * self.__height
+            return (self.__width * self.__height)
 
         def display(self):
             """prints Rectangle to stdout"""
