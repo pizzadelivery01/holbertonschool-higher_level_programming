@@ -51,8 +51,6 @@ class Base:
             temp = cls(1, 1)
         if cls.__name__ == 'Square':
             temp = cls(1)
-        else:
-            temp = None
         temp.update(**dictionary)
         return temp
 
