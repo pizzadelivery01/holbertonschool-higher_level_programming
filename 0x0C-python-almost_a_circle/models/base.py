@@ -66,8 +66,8 @@ class Base:
                 li = cls.from_json_string(f.read())
             for i, obj in enumerate(li):
                 li[i] = cls.create(**obj)
-        except:
-            pass
+        except IOError:
+            return []
         return li
 
     @classmethod
