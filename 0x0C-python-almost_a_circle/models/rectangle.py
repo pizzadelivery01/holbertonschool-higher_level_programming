@@ -93,22 +93,17 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """updates more than one arg"""
-        if len(args):
-            for i, temp in enumerate(args):
-                if i == 0:
-                    self.id = temp
-                elif i == 1:
-                    self.width = temp
-                elif i == 2:
-                    self.height = temp
-                elif i == 3:
-                    self.x = temp
-                elif i == 4:
-                    self.y = temp
+        if len(args) > 0
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
             else:
-                if "id" in kwargs:
+                if 'id' in kwargs:
                     self.id = kwargs["id"]
-                if "width" in kwargs:
+                if 'width' in kwargs:
                     self.width = kwargs["width"]
                 if "height" in kwargs:
                     self.height = kwargs["height"]
