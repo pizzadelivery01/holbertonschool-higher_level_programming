@@ -107,15 +107,15 @@ class Rectangle(Base):
                     self.y = temp
             else:
                 if "id" in kwargs:
-                    self.id = kwargs['id']
+                    self.id = kwargs["id"]
                 if "width" in kwargs:
-                    self.width = kwargs['width']
+                    self.width = kwargs["width"]
                 if "height" in kwargs:
-                    self.height = kwargs['height']
+                    self.height = kwargs["height"]
                 if "x" in kwargs:
-                    self.x = kwargs['x']
+                    self.x = kwargs["x"]
                 if "y" in kwargs:
-                    self.y = kwargs['y']
+                    self.y = kwargs["y"]
 
     def to_dictionary(self):
         """dictionary Rectangle"""
