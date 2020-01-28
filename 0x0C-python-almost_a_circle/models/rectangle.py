@@ -93,7 +93,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """updates more than one arg"""
-        if len(args) > 0
+        if len(args) > 0:
             try:
                 self.id = args[0]
                 self.width = args[1]
