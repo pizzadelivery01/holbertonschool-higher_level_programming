@@ -50,9 +50,9 @@ class Base:
 
         from models.rectangle import Rectangle
         from models.square import Square
-        if cls.__name__ == Rectangle:
+        if cls.__name__ == "Rectangle":
             temp = cls(1, 1)
-        if cls.__name__ == Square:
+        if cls.__name__ == "Square":
             temp = cls(1)
         temp.update(**dictionary)
         return temp
