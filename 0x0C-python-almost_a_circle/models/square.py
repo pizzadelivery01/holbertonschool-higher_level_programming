@@ -3,7 +3,7 @@
 contains "Square" class
 """
 
-from models.rectangle imprt Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
