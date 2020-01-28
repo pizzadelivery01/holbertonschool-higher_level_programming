@@ -57,7 +57,7 @@ class Base:
         return temp
 
     @classmethod
-    def load_from_files(cls):
+    def load_from_file(cls):
         """ loading json from inside files """
         filename = cls.__name__ + ".json"
         li = []
