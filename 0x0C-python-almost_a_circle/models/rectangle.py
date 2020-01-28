@@ -97,25 +97,25 @@ class Rectangle(Base):
             for each, temp in enumerate(args):
                 if i == 0:
                     self.id = temp
-                    elif i == 1:
-                        self.width = temp
-                    elif i == 2:
-                        self.height = temp
-                    elif i == 3:
-                        self.x = temp
-                    elif i == 4:
-                        self.y = temp
-                else:
-                    if "id" in kwargs:
-                        self.id = kwargs['id']
-                    if "width" in kwargs:
-                        self.width = kwargs['width']
-                    if "height" in kwargs:
-                        self.height = kwargs['height']
-                    if "x" in kwargs:
-                        self.x = kwargs['x']
-                    if "y" in kwargs:
-                        self.y = kwargs['y']
+                elif i == 1:
+                    self.width = temp
+                elif i == 2:
+                    self.height = temp
+                elif i == 3:
+                    self.x = temp
+                elif i == 4:
+                    self.y = temp
+            else:
+                if "id" in kwargs:
+                    self.id = kwargs['id']
+                if "width" in kwargs:
+                    self.width = kwargs['width']
+                if "height" in kwargs:
+                    self.height = kwargs['height']
+                if "x" in kwargs:
+                    self.x = kwargs['x']
+                if "y" in kwargs:
+                    self.y = kwargs['y']
 
     def to_dictionary(self):
         """dictionary Rectangle"""
