@@ -94,7 +94,7 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """updates more than one arg"""
         if len(args):
-            for each, temp in enumerate(args):
+            for i, temp in enumerate(args):
                 if i == 0:
                     self.id = temp
                 elif i == 1:
