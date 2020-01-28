@@ -100,7 +100,9 @@ class Rectangle(Base):
                 self.height = args[2]
                 self.x = args[3]
                 self.y = args[4]
-            else:
+            except InedxError:
+                pass
+        else:
                 if 'id' in kwargs:
                     self.id = kwargs["id"]
                 if 'width' in kwargs:
