@@ -51,7 +51,7 @@ class Base:
             temp = cls(1, 1)
         if cls.__name__ is "Square":
             temp = cls(1)
-        temp.update(**dictionary)
+        temp.update(*dictionary)
         return temp
 
     @classmethod
