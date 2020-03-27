@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+#!/user/bin/env python3
 """
-lists all states from given database
+lists all states with uppercase letter N form db
 """
 
 import MySQLdb
@@ -14,9 +14,9 @@ if __name__ == "__main__":
                          db=argv[3]
                          )
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    cur.execute(SELECT * from states WHERE name like "N%" ORDER BY id ASC)
     rows = cur.fetchall()
     for each in rows:
         print(each)
-    cur.close
-    db.close
+    cur.close()
+    db.close()
