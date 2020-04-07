@@ -1,3 +1,3 @@
 #!/bin/bash
 #im going to find you!!!!
-curl -sLX PUT -H "Origin: HolbertonSchool" -d "user_id=98" "$1"
+curl -sLX PUT -d "user_id=98" -H "Origin: HolbertonSchool" "$1"
