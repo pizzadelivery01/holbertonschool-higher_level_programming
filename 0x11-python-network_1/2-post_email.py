@@ -11,7 +11,7 @@ if __name__ == "__main__":
     from sys import argv
 
     url = argv[1]
-    values = {'email' : argv[2]}
+    values = {'email': argv[2]}
 
     data = urllib.parse.urlencode(values)
     data = data.encode('utf-8')
