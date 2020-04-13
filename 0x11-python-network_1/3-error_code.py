@@ -6,7 +6,9 @@
 """
 
 if __name__ == "__main__":
-    import urllib
+    import urllib.error
+    import urllib.request
+    from sys import argv
     req = urllib.request.Request(argv[1])
     try:
         with urllib.request.urlopen(req) as r:
