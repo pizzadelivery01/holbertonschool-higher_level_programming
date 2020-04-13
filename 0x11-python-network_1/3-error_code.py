@@ -4,10 +4,10 @@
  to the URL and displays the body of the response
  and handle httpError
 """
-from urllib import error as error
-from urllib import request as request
 
 if __name__ == "__main__":
+    import urllib.error as error
+    import urllib.request as request
     req = request.Request(argv[1])
     try:
         with request.urlopen(req) as r:
