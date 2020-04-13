@@ -2,12 +2,15 @@
 """
 gets status with urllib
 """
-import urllib
 
 if __name__ == "__main__":
-    with urllib.request.urlopen("https://intranet.hbtn.io/status") as req:
-        response = req.read()
+    from urllib.request import Request, urlopen
+    import urllib.request
+
+    response = Request('https://intranet.hbtn.io/status')
+    with urlopen(response) as req:
+        html = req.read()
         print("Body response:")
-        print("\t- type: {}".format(type(response)))
-        print("\t- content: {}".format(response))
-        print("\t- utf8 content: {}".format(respose.decode('utf8')))
+        print("\t- type: {}".format(type(html)))
+        print("\t- content: {}".format(html))
+        print("\t- utf8 content: {}".format(html.decode('utf8')))
