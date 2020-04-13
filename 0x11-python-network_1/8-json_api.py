@@ -26,11 +26,11 @@ if __name__ == "__main__":
     r = requests.post("http://0.0.0.0:5000/search_user", data={'q': q})
     try:
         json_dict = r.json()
-        
+
         if not json_dict:
             print("No result")
         else:
-            print('[{}] {}'.format(json_dict.get['id'],
-                                   json_dict.get['name']))
+            print('[{}] {}'.format(json_dict['id'],
+                                   json_dict['name']))
     except ValueError:
         print("Not a valid JSON")
