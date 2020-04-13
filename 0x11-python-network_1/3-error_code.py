@@ -8,6 +8,7 @@
 if __name__ == "__main__":
     import urllib.error
     import urllib.request
+    import urllib.parse
     from sys import argv
     req = urllib.request.Request(argv[1])
     try:
