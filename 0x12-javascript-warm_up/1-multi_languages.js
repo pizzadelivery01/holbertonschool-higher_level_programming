@@ -1,4 +1,4 @@
-!/usr/bin/node
+#!/usr/bin/node
 // js print statements
 
 console.log('C is fun');
