@@ -1,12 +1,12 @@
 #!/usr/bin/node
 // starwars titles
 const request = require('request');
-const url = 'http://swapi.co/api/films/';
+const url = 'https://swapi-api.hbtn.io/api/films/';
 const episode = process.argv[2];
 request(url + episode, function (err, response, body) {
-  if (err) {
+    if (err) {
     console.log(err);
-  } else if (response.statusCode === 200) {
+  } else if (response.statusCode == 200) {
     const obj = JSON.parse(body);
     console.log(obj.title);
   } else {
